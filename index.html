@@ -22,18 +22,23 @@
 
 <body>
 
-  <span>last update time : <p id="updatetime"></p> </span>
+  <span>last update time : <b id="updatetime"/></span>
   <!-- 
   <script src="js/auto_reload.js"></script>
   -->
-  <script language="javascript">
+  <script langage="javascript">
   <!--
   $(function() {
-      upDateTime = $.attr("#updatetime");
       function init() {
           timestamp = new Date();
-          upDateTime = timestamp.getHours() + ':' + timestamp.getMinutes() + ':' + timestamp.getSeconds();
-      }
+          upDateTime = timestamp.getHours() + ':' 
+          + timestamp.getMinutes() + ':' 
+          + timestamp.getSeconds();
+          console.log(upDateTime);
+          return upDateTime;
+      };
+      var initTime = init();
+      $("#updatetime").text(initTime);
   })
   -->
   </script>
