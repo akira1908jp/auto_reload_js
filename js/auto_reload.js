@@ -1,7 +1,12 @@
 $(function() {
-    upDateTime = $.attr("updatetime");
     function init() {
-        timestamp = new Date("hh:mm:ss");
-        upDateTime = timestamp;
-    }
+        timestamp = new Date();
+        upDateTime = timestamp.getHours() + ':' 
+        + timestamp.getMinutes() + ':' 
+        + timestamp.getSeconds();
+        console.log(upDateTime);
+        return upDateTime;
+    };
+    var initTime = init();
+    $("#updatetime").text(initTime);
 })
