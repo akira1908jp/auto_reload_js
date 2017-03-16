@@ -9,4 +9,7 @@ $(function() {
     };
     var initTime = init();
     $("#updatetime").text(initTime);
+    $("#auto-refresh-toggle").click(function(){
+        $(this).toggleClass("on");
+    });
 })
