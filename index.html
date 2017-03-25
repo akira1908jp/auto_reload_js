@@ -89,13 +89,26 @@ input:checked + .slider:before {
 
   <div id="mainContents">
     <div id="auto-refresh">
+    <!--
     <label class="switch">
       <input type="checkbox">
       <b>auto refresh</b>
       <div class="slider round"></div>
     </label>
+    -->
+    <button class="pure-button" >refresh</button>
+    <input type="radio" name="auto-load" value="disable" checked>disable
+    <input type="radio" name="auto-load" value="enable" >enable
     </div>
     <span>last update time : <b id="updatetime"/></span>
+
+    <div id="tweet-contents">
+      <a class="twitter-timeline" 
+        data-lang="ja" 
+        href="https://twitter.com/akira1908jp">
+        Tweets by akira1908jp</a> 
+        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <div>
   </div>
 
   <script src="js/auto_reload.js"></script>
